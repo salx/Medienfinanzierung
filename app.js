@@ -19,7 +19,7 @@ Wie DE abheben?
 (function(){
 	var margin = {top: 100, right: 20, bottom: 20, left: 70},
         width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom,
+        height = 700 - margin.top - margin.bottom,
         half = height/2-1;
 
     //ordinal scale for medienunternehmen
@@ -109,7 +109,7 @@ Wie DE abheben?
 		
         svg.append("rect")
             .attr("class", "background1")
-            .attr("x", 518)
+            .attr("x", 495)
             .attr("y", -margin.top)
             .attr("height", height+margin.top + margin.bottom)
             .attr("width", 372);
@@ -184,7 +184,7 @@ Wie DE abheben?
     		})
     		.attr("fill", function(d){ return color(d.name); })
             .on("mouseover", tip.show)
-            //.on("mouseout", tip.hide
+            .on("mouseout", tip.hide);
             //remove de-tip.n divs...die behindern das neue mousover! daher hier noc ohne mouseout.
 
     	unternehmen.append( 'text' )
